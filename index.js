@@ -16,7 +16,6 @@ app.get("/search", (req, res) => {
   const query = req.query["query"];
 
   const url = API_SERVICE_URL + "location/search/?query=" + query;
-  console.log(url);
 
   request(url).pipe(res);
 });
@@ -25,7 +24,6 @@ app.get("/coords", (req, res) => {
   const lattlong = req.query["lattlong"];
 
   const url = API_SERVICE_URL + "location/search/?lattlong=" + lattlong;
-  console.log(url);
 
   request(url).pipe(res);
 });
@@ -34,7 +32,6 @@ app.get("/location", (req, res) => {
   const woeid = req.query["woeid"];
 
   const url = API_SERVICE_URL + "location/" + woeid;
-  console.log(url);
 
   request(url).pipe(res);
 });
